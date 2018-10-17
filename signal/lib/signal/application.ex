@@ -10,6 +10,7 @@ defmodule Signal.Application do
     children = [
       # Starts a worker by calling: Signal.Worker.start_link(arg)
       # {Signal.Worker, arg},
+      {Registry, keys: :unique, name: :RegistrySignals},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
